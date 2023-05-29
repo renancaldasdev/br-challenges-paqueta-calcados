@@ -28,3 +28,23 @@
   --quadrados: #f6f5f5;
   --box-hover: #f2f2f2;
 }
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
