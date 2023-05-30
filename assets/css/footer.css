@@ -1,0 +1,18 @@
+footer {
+  padding: 18px 0;
+  background-color: var(--secundaria-1);
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+footer img {
+  max-width: 265px;
+}

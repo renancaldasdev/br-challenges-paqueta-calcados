@@ -1,0 +1,26 @@
+.marcas {
+  padding-bottom: 170px;
+}
+
+.marcas h2 {
+  font-family: var(--font-montserrat);
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 48px;
+
+  color: var(--secundaria);
+}
+
+.marcas-img {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.marcas-img img {
+  padding-top: 80px;
+  max-width: fit-content;
+}
