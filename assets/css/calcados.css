@@ -1,0 +1,66 @@
+.calcados {
+  padding: 130px 0;
+}
+
+.calcados-item {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.calcados-item.reverse {
+  margin-top: 100px;
+  flex-direction: row-reverse;
+}
+
+.calcados-img.woman,
+.calcados-img.man {
+  background-image: linear-gradient(
+      94deg,
+      #f57002 3.3%,
+      rgba(245, 112, 2, 0) 56.06%
+    ),
+    url("../images/calcados-femininos.png");
+  width: 100%;
+  height: 667px;
+  background-size: cover;
+  background-position: center;
+}
+
+.calcados-img.man {
+  background-image: linear-gradient(
+      269deg,
+      #f57002 3.3%,
+      rgba(245, 112, 2, 0) 56.06%
+    ),
+    url("../images/calcados-masculinos.png");
+}
+
+.calcados-img {
+  max-width: 668px;
+  height: 100%;
+}
+
+.calcados-desc {
+  display: grid;
+  justify-items: end;
+}
+
+.reverse .calcados-desc {
+  justify-items: start;
+}
+
+.right.calcados-desc h3 {
+  text-align: inherit;
+}
+
+.calcados-desc h3 {
+  max-width: 601px;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: right;
+  color: var(--secundaria-1);
+  margin-bottom: 60px;
+}
