@@ -1,0 +1,72 @@
+.outlet {
+  padding-top: 115px;
+  padding-bottom: 170px;
+}
+.outlet-logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 80px;
+}
+
+.outlet-logo img {
+  max-width: 400px;
+  object-fit: cover;
+}
+
+.outlet-logo::after {
+  content: "outlet";
+  bottom: -100px;
+  left: 170px;
+  margin-bottom: 74px;
+  position: absolute;
+
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 50px;
+  color: var(--primaria);
+  text-transform: uppercase;
+}
+
+.outlet-logo p {
+  max-width: 600px;
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 36px;
+  text-align: right;
+  color: var(--secundaria-1);
+}
+
+.outlet-number-shoes {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.number-shoes {
+  width: 65px;
+  height: 65px;
+  border: 1px solid var(--secundaria-1);
+  border-radius: 3px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--secundaria-1);
+}
+
+.number-shoes p {
+  font-family: var(--font-poppins);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 31px;
+  opacity: 0.7;
+}
+
+.number-shoes:hover {
+  background-color: var(--secundaria-1);
+  color: #fff;
+}

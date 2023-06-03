@@ -60,26 +60,6 @@
   width: 28px;
 }
 
-/* .header-actions--item::after {
-  content: "1";
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  background: linear-gradient(133.49deg, #f99500 21.3%, #ffcd29 133.37%);
-  color: var(--light);
-  text-align: center;
-  position: absolute;
-  top: -4px;
-  left: 14px;
-  display: block;
-
-  font-family: var(--font-poppins);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 17px;
-} */
-
 .header-actions--item p {
   font-family: var(--font-poppins);
   font-style: normal;

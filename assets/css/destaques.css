@@ -1,0 +1,95 @@
+.destaques-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-family: var(--font-montserrat);
+  text-transform: uppercase;
+}
+
+.destaques-header h2 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 40px;
+  color: var(--secundaria);
+}
+
+.destaques-header p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--secundaria);
+  border-bottom: 1px solid var(--primaria--1);
+}
+
+.cards-destaques {
+  margin-top: 45px;
+}
+
+.cards-destaques-carrousel {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.carrousel-card {
+  max-width: 307px;
+  padding: 25px;
+
+  background: #ffffff;
+  box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  position: relative;
+}
+
+.card-image {
+  margin: 0 auto;
+  max-width: 210px;
+  height: 210px;
+  margin-bottom: 24px;
+}
+
+.card-icon {
+  top: 40px;
+  right: 35px;
+  position: absolute;
+}
+
+.card-name {
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+
+  color: var(--secundaria);
+  margin-bottom: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-price {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  /* identical to box height, or 140% */
+
+  /* secundária */
+
+  color: #121212;
+  margin-bottom: 8px;
+}
+
+.card-price-parcelado {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+
+  color: var(--secundaria);
+
+  opacity: 0.6;
+  margin-bottom: 12px;
+}
