@@ -1,3 +1,7 @@
+.destaques {
+  padding-bottom: 170px;
+}
+
 .destaques-header {
   display: flex;
   align-items: center;
@@ -30,6 +34,7 @@
   display: flex;
   align-items: center;
   gap: 30px;
+  overflow-x: hidden;
 }
 
 .carrousel-card {
@@ -60,6 +65,7 @@
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
+  text-transform: uppercase;
 
   color: var(--secundaria);
   margin-bottom: 12px;
@@ -92,4 +98,24 @@
 
   opacity: 0.6;
   margin-bottom: 12px;
+}
+
+.cards-button {
+  margin-top: 46px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.button-card {
+  width: 44px;
+  height: 5px;
+  background-color: var(--secundaria);
+  opacity: 0.3;
+  border-radius: 7px;
+}
+
+.button-card.selected {
+  opacity: 1;
 }

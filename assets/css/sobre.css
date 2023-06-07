@@ -1,0 +1,77 @@
+a {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.6;
+}
+
+.flex-sobre {
+  display: flex;
+  gap: 40px;
+}
+
+.sobre-nos {
+  background: var(--light--1);
+  padding: 60px 0;
+}
+
+.sobre h3 {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 28px;
+  color: var(--secundaria-1);
+  margin-bottom: 12px;
+}
+
+.sobre-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sobre-unique {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sobre-images {
+  max-width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.sobre-images a {
+  opacity: 1;
+  max-width: 50px;
+}
+
+.sobre-sociais {
+  margin-top: 20px;
+}
+
+.sociais {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+}
+
+.premio img {
+  width: 70px;
+}
+
+.site-blindado {
+  margin-top: 26px;
+}
+
+.site img {
+  width: 115px;
+}

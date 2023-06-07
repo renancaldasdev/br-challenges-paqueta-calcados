@@ -37,5 +37,6 @@ export default async function shoesApi() {
 
     carroussel.innerHTML = htmlCardShoes;
   }
+
   apiShoes();
 }
