@@ -1,9 +1,9 @@
 export default async function shoesApi() {
+  const carroussel = document.querySelector(".cards-destaques-carrousel");
+
   async function apiShoes() {
     const data = await fetch("https://api.brchallenges.com/api/paqueta/shoes");
     const dataJson = await data.json();
-
-    const carroussel = document.querySelector(".cards-destaques-carrousel");
 
     const htmlCardShoes = dataJson
       .map(({ name, price, image }) => {
@@ -36,6 +36,36 @@ export default async function shoesApi() {
       .join("");
 
     carroussel.innerHTML = htmlCardShoes;
+
+    const carrouselCard = document.querySelectorAll(".carrousel-card").length;
+    carroussel.style.width = `calc(100vw * ${carrouselCard})`;
+    let currentSlide = 0;
+    let buttonLeft = document.querySelector(".left");
+    let buttonRight = document.querySelector(".bRight");
+
+    buttonLeft.addEventListener("click", () => {
+      currentSlide--;
+      if (currentSlide < 0) {
+        currentSlide = carrouselCard - 1;
+      }
+      console.log("left:", currentSlide);
+
+      updateMargin();
+    });
+
+    buttonRight.addEventListener("click", () => {
+      currentSlide++;
+      if (currentSlide > carrouselCard - 1) {
+        currentSlide = 0;
+      }
+      console.log("Right:", currentSlide);
+      updateMargin();
+    });
+
+    function updateMargin() {
+      const moveSlide = currentSlide * document.body.clientWidth;
+      carroussel.style.marginLeft = `-${moveSlide}px`;
+    }
   }
 
   apiShoes();

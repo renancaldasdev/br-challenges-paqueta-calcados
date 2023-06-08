@@ -28,13 +28,14 @@
 
 .cards-destaques {
   margin-top: 45px;
+  overflow: hidden;
 }
 
 .cards-destaques-carrousel {
   display: flex;
   align-items: center;
   gap: 30px;
-  overflow-x: hidden;
+  transition: all ease 0.3s;
 }
 
 .carrousel-card {
@@ -114,6 +115,7 @@
   background-color: var(--secundaria);
   opacity: 0.3;
   border-radius: 7px;
+  cursor: pointer;
 }
 
 .button-card.selected {
