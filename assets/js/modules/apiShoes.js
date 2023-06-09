@@ -38,7 +38,9 @@ export default async function shoesApi() {
     carroussel.innerHTML = htmlCardShoes;
 
     const carrouselCard = document.querySelectorAll(".carrousel-card").length;
-    carroussel.style.width = `calc(100vw * ${carrouselCard})`;
+    const carrouselWidth =
+      document.querySelector(".carrousel-card").clientWidth;
+
     let currentSlide = 0;
     let buttonLeft = document.querySelector(".left");
     let buttonRight = document.querySelector(".bRight");
@@ -46,9 +48,8 @@ export default async function shoesApi() {
     buttonLeft.addEventListener("click", () => {
       currentSlide--;
       if (currentSlide < 0) {
-        currentSlide = carrouselCard - 1;
+        console.log((currentSlide = carrouselCard - 1));
       }
-      console.log("left:", currentSlide);
 
       updateMargin();
     });
@@ -58,12 +59,14 @@ export default async function shoesApi() {
       if (currentSlide > carrouselCard - 1) {
         currentSlide = 0;
       }
-      console.log("Right:", currentSlide);
+
+      const carrouselOpacity = document.querySelector(".carrousel-card");
+
       updateMargin();
     });
 
     function updateMargin() {
-      const moveSlide = currentSlide * document.body.clientWidth;
+      const moveSlide = currentSlide * carrouselWidth;
       carroussel.style.marginLeft = `-${moveSlide}px`;
     }
   }
