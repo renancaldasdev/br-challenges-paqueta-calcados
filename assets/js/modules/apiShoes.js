@@ -48,9 +48,13 @@ export default async function shoesApi() {
     buttonLeft.addEventListener("click", () => {
       currentSlide--;
       if (currentSlide < 0) {
-        console.log((currentSlide = carrouselCard - 1));
+        currentSlide = carrouselCard - 1;
       }
 
+      if (buttonRight.classList.contains("selected")) {
+        buttonRight.classList.remove("selected");
+        buttonLeft.classList.add("selected");
+      }
       updateMargin();
     });
 
@@ -60,7 +64,10 @@ export default async function shoesApi() {
         currentSlide = 0;
       }
 
-      const carrouselOpacity = document.querySelector(".carrousel-card");
+      if (buttonLeft.classList.contains("selected")) {
+        buttonLeft.classList.remove("selected");
+        buttonRight.classList.add("selected");
+      }
 
       updateMargin();
     });
