@@ -44,11 +44,7 @@ A autora do layout é a design [**Ana Maria Almeida**](https://www.linkedin.com/
 
 - [:white_check_mark:] No card do produto deverá conter a [flag produto esgotado](https://www.figma.com/file/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?type=design&node-id=103-679&t=iAA31lEBc7NQJqfs-0) caso a propriedade **soldout** seja igual a true.
 
-<!-- TODO criar carrousel -->
-
 - [:white_check_mark:] Criar um carrousel para navegar na listagem dos produtos, por padrão será mostrado quatro produtos.
-
-<!-- TODO criar hover -->
 
 - [:white_check_mark:] Criar efeito de `hover` ao passar o mouse por cima do botão Comprar, localizado no card do produto.
 

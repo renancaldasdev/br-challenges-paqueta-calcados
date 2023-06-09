@@ -65,3 +65,7 @@ li {
 
   cursor: pointer;
 }
+
+.button:hover {
+  background: var(--primaria--1);
+}

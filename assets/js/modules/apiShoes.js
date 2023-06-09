@@ -73,6 +73,8 @@ export default async function shoesApi() {
     });
 
     function updateMargin() {
+      const carrouselCard = document.querySelectorAll(".carrousel-card");
+      // carrouselCard.style.opacity = 1;
       const moveSlide = currentSlide * carrouselWidth;
       carroussel.style.marginLeft = `-${moveSlide}px`;
     }
