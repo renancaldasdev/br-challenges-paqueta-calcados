@@ -28,7 +28,7 @@
 
 .cards-destaques {
   margin-top: 45px;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .cards-destaques-carrousel {
@@ -46,7 +46,32 @@
   box-shadow: 0px 10px 21px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   position: relative;
-  /* opacity: 0.5; */
+}
+
+.carrousel-card.true::before {
+  content: "Produto Esgotado";
+  width: 100%;
+  height: 32px;
+  background-color: var(--primaria--1);
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  font-family: var(--font-poppins);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--light);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button.true {
+  background: var(--primaria--1);
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .card-image {

@@ -40,8 +40,6 @@ A autora do layout é a design [**Ana Maria Almeida**](https://www.linkedin.com/
 
 - [:white_check_mark:] Todos os produtos devem ser listado de forma dinâmica atráves do endpoint [/shoes](https://api.brchallenges.com/api/paqueta/shoes) da API.
 
-<!-- TODO soldout -->
-
 - [:white_check_mark:] No card do produto deverá conter a [flag produto esgotado](https://www.figma.com/file/df5XIaBPlnvzkMNUxhLFpq/Paqueta---BrChallenges?type=design&node-id=103-679&t=iAA31lEBc7NQJqfs-0) caso a propriedade **soldout** seja igual a true.
 
 - [:white_check_mark:] Criar um carrousel para navegar na listagem dos produtos, por padrão será mostrado quatro produtos.
@@ -50,7 +48,7 @@ A autora do layout é a design [**Ana Maria Almeida**](https://www.linkedin.com/
 
 ### Nível Difícil
 
-- [ ] Todos os requisitos do nível fácil e médio.
+- [:white_check_mark:] Todos os requisitos do nível fácil e médio.
 
 - [ ] Construir a tela do produto e consumir os dados via API.
 

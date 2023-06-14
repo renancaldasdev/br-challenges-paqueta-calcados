@@ -6,9 +6,9 @@ export default async function shoesApi() {
     const dataJson = await data.json();
 
     const htmlCardShoes = dataJson
-      .map(({ name, price, image }) => {
+      .map(({ name, price, image, soldout }) => {
         return `
-        <div class="carrousel-card">
+        <div class="carrousel-card ${soldout}">
           <div class="card-image">
             <img src="${image}" alt="" />
           </div>
@@ -29,7 +29,7 @@ export default async function shoesApi() {
             }
           ).format(price.value / 10)}</div>
 
-          <button class="button">Comprar</button>
+          <button class="button ${soldout}">Comprar</button>
         </div>    
         `;
       })
@@ -37,47 +37,53 @@ export default async function shoesApi() {
 
     carroussel.innerHTML = htmlCardShoes;
 
-    const carrouselCard = document.querySelectorAll(".carrousel-card").length;
-    const carrouselWidth =
-      document.querySelector(".carrousel-card").clientWidth;
-
-    let currentSlide = 0;
-    let buttonLeft = document.querySelector(".left");
-    let buttonRight = document.querySelector(".bRight");
-
-    buttonLeft.addEventListener("click", () => {
-      currentSlide--;
-      if (currentSlide < 0) {
-        currentSlide = carrouselCard - 1;
-      }
-
-      if (buttonRight.classList.contains("selected")) {
-        buttonRight.classList.remove("selected");
-        buttonLeft.classList.add("selected");
-      }
-      updateMargin();
+    const button = document.querySelectorAll(".button.true");
+    button.forEach((item) => {
+      item.innerHTML = "ME AVISE QUANDO CHEGAR";
     });
 
-    buttonRight.addEventListener("click", () => {
-      currentSlide++;
-      if (currentSlide > carrouselCard - 1) {
-        currentSlide = 0;
+    function carrouselPage() {
+      const carrouselCard = document.querySelectorAll(".carrousel-card").length;
+      const carrouselWidth =
+        document.querySelector(".carrousel-card").clientWidth;
+
+      let currentSlide = 0;
+      let buttonLeft = document.querySelector(".left");
+      let buttonRight = document.querySelector(".bRight");
+
+      buttonLeft.addEventListener("click", () => {
+        currentSlide--;
+        if (currentSlide < 0) {
+          currentSlide = carrouselCard - 1;
+        }
+
+        if (buttonRight.classList.contains("selected")) {
+          buttonRight.classList.remove("selected");
+          buttonLeft.classList.add("selected");
+        }
+        updateMargin();
+      });
+
+      buttonRight.addEventListener("click", () => {
+        currentSlide++;
+        if (currentSlide > carrouselCard - 1) {
+          currentSlide = 0;
+        }
+
+        if (buttonLeft.classList.contains("selected")) {
+          buttonLeft.classList.remove("selected");
+          buttonRight.classList.add("selected");
+        }
+
+        updateMargin();
+      });
+
+      function updateMargin() {
+        const moveSlide = currentSlide * carrouselWidth;
+        carroussel.style.marginLeft = `-${moveSlide}px`;
       }
-
-      if (buttonLeft.classList.contains("selected")) {
-        buttonLeft.classList.remove("selected");
-        buttonRight.classList.add("selected");
-      }
-
-      updateMargin();
-    });
-
-    function updateMargin() {
-      const carrouselCard = document.querySelectorAll(".carrousel-card");
-      // carrouselCard.style.opacity = 1;
-      const moveSlide = currentSlide * carrouselWidth;
-      carroussel.style.marginLeft = `-${moveSlide}px`;
     }
+    carrouselPage();
   }
 
   apiShoes();
