@@ -1,0 +1,207 @@
+body {
+  min-height: 100vh;
+}
+
+#content {
+  padding-top: 80px;
+}
+
+.content-top {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 40px;
+
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+  color: var(--secundaria-1);
+}
+
+.content-top p {
+  opacity: 0.6;
+}
+
+.content-top svg {
+  width: 5px;
+}
+
+.content-top .name-short {
+  font-weight: 500;
+  opacity: 1;
+  border-bottom: 1px solid var(--primaria--1);
+}
+
+.shoe-purchase {
+  display: flex;
+  gap: 80px;
+
+  margin-bottom: 80px;
+}
+
+.shoe-image > img {
+  max-width: 700px;
+  margin-bottom: 40px;
+}
+
+.shoe-image p {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.8;
+  margin-bottom: 12px;
+}
+
+.show-desc-title svg {
+  max-width: 35px;
+}
+
+.show-desc-title h3 {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 50px;
+  color: var(--secundaria);
+}
+
+.show-desc-title p {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.8;
+  margin-top: 16px;
+}
+
+.show-desc-price {
+  margin-top: 48px;
+}
+
+.show-desc-price-descount {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.show-desc-price-descount s {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 31px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.8;
+  margin-right: 24px;
+}
+
+.show-desc-price-descount p {
+  padding: 2px 16px;
+  background-color: #65c239;
+  border-radius: 3px;
+
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 22px;
+
+  color: var(--light);
+}
+
+.show-desc-price-part p:first-child {
+  font-family: var(--font-montserrat);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 56px;
+  color: var(--secundaria);
+  margin-bottom: 8px;
+}
+
+.show-desc-price-part p:last-child {
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 28px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.6;
+  margin-bottom: 48px;
+}
+
+.show-desc-numbers .number {
+  font-family: var(--font-montserrat);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.show-desc-number {
+  display: flex;
+  justify-content: space-between;
+}
+
+.show-desc-number .number-shoes {
+  width: 47px;
+  height: 47px;
+  margin-bottom: 31px;
+}
+
+.show-desc-number .number-shoes p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 31px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.7;
+}
+
+.show-desc-numbers .guia {
+  font-family: var(--font-montserrat);
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+
+  color: var(--secundaria-1);
+
+  opacity: 0.6;
+  margin-bottom: 96px;
+}
+
+.show-desc-text h4 {
+  font-family: var(--font-montserrat);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+
+  color: var(--secundaria);
+  margin-bottom: 16px;
+}
+
+.show-desc-text p {
+  font-family: var(--secundaria-1);
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 40px;
+
+  color: var(--secundaria-1);
+}

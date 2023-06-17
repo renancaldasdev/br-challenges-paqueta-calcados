@@ -127,6 +127,19 @@
   margin-bottom: 12px;
 }
 
+.comprar {
+  text-align: center;
+  color: var(--light);
+
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  line-height: 20px;
+
+  font-family: var(--font-poppins);
+  opacity: 1;
+}
+
 .cards-button {
   margin-top: 46px;
   display: flex;

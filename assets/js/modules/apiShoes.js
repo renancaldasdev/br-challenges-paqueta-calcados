@@ -6,7 +6,7 @@ export default async function shoesApi() {
     const dataJson = await data.json();
 
     const htmlCardShoes = dataJson
-      .map(({ name, price, image, soldout }) => {
+      .map(({ id, name, price, image, soldout }) => {
         return `
         <div class="carrousel-card ${soldout}">
           <div class="card-image">
@@ -29,13 +29,25 @@ export default async function shoesApi() {
             }
           ).format(price.value / 10)}</div>
 
-          <button class="button ${soldout}">Comprar</button>
+          
+            <a class="button comprar ${soldout}" id=${id} href="../../../produto.html">Comprar</a>
+          
         </div>    
         `;
       })
       .join("");
 
     carroussel.innerHTML = htmlCardShoes;
+
+    const id = document.querySelectorAll(".comprar");
+    id.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        const idProduto = item.getAttribute("id");
+        e.preventDefault();
+        window.location.href = `produto.html?id=${idProduto}`;
+        // console.log(idProduto);
+      });
+    });
 
     const button = document.querySelectorAll(".button.true");
     button.forEach((item) => {
