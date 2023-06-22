@@ -1,2 +1,2 @@
-import products from "./modules/products.js";
+import { products } from "./modules/products.js";
 products();

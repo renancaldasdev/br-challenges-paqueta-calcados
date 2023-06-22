@@ -1,4 +1,4 @@
-export default async function products() {
+export async function products() {
   const urlParams = new URLSearchParams(window.location.search);
   const idUrl = urlParams.get("id");
 
@@ -11,11 +11,18 @@ export default async function products() {
     const dataJson = await data.json();
 
     const htmlProducts = dataJson
-      .map(({ id, name, price, soldout, image, description, discount }) => {
+      .map(({ id, name, price, soldout, image, description }) => {
+        let priceEntire = price.value;
+        let discountFixed = price.discount.toFixed(2);
+        let discountProduce = price.value * discountFixed;
+        let newPrice = priceEntire - discountProduce;
+
+        let discountReal = discountFixed * 100;
+
         if (idUrl === id) {
           return `
           <div class="content-top">
-          <p>Paqueta</p>
+          <a href='../../../index.html'>Paqueta</a>
           <svg
             width="7"
             height="11"
@@ -78,12 +85,23 @@ export default async function products() {
             </div>
             <div class="show-desc-price">
               <div class="show-desc-price-descount">
-                <s>R$ ${price.value}</s>
-                <p>${price.discount} desconto</p>
+                <s>${new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(price.value)}</s>
+                <p class="card-discount">
+                  ${discountReal}% DE DESCONTO
+                </p>
               </div>
               <div class="show-desc-price-part">
-                <p>R$ ${price.value} / ${price.discount}</p>
-                <p>ou 10x de ${price.value / 10}</p>
+                <p>${new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(newPrice)}</p>
+                <p>ou 10x de ${new Intl.NumberFormat("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                }).format(newPrice)}</p>
               </div>
               <div class="show-desc-numbers">
                 <p class="number">Escolha a numeração</p>
@@ -122,6 +140,17 @@ export default async function products() {
       })
       .join("");
     page.innerHTML = htmlProducts;
+
+    function activeButton() {
+      const buttonShoe = document.querySelectorAll(".number-shoes");
+
+      buttonShoe.forEach((item) => {
+        item.addEventListener("click", (e) => {
+          item.classList.toggle("ativo");
+        });
+      });
+    }
+    activeButton();
   }
   productsApi();
 }

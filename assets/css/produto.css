@@ -57,6 +57,10 @@ body {
   margin-bottom: 12px;
 }
 
+.shoe-desc {
+  max-width: 547px;
+}
+
 .show-desc-title svg {
   max-width: 35px;
 }
@@ -160,6 +164,14 @@ body {
   margin-bottom: 31px;
 }
 
+.number-shoes.ativo {
+  color: var(--primaria--1);
+  font-size: 22px;
+  font-family: var(--font-montserrat);
+  font-weight: 500;
+  line-height: 30px;
+}
+
 .show-desc-number .number-shoes p {
   display: flex;
   align-items: center;
@@ -198,7 +210,7 @@ body {
 }
 
 .show-desc-text p {
-  font-family: var(--secundaria-1);
+  font-family: var(--font-montserrat);
   font-weight: 300;
   font-size: 22px;
   line-height: 40px;
