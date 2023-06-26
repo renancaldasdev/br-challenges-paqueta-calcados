@@ -164,12 +164,13 @@ body {
   margin-bottom: 31px;
 }
 
-.number-shoes.ativo {
+.show-desc-number .number-shoes p.ativo {
   color: var(--primaria--1);
   font-size: 22px;
   font-family: var(--font-montserrat);
   font-weight: 500;
   line-height: 30px;
+  display: none;
 }
 
 .show-desc-number .number-shoes p {

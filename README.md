@@ -50,7 +50,7 @@ A autora do layout é a design [**Ana Maria Almeida**](https://www.linkedin.com/
 
 - [:white_check_mark:] Todos os requisitos do nível fácil e médio.
 
-- [ ] Construir a tela do produto e consumir os dados via API.
+- [:white_check_mark:] Construir a tela do produto e consumir os dados via API.
 
 - [ ] Ao clicar no botão Comprar, o produto deverá ser adicionado no carrinho de compras. Como o carrinho está em outra tela, você pode usar o `localstorage` para armazenar os produtos do carrinho.
 
